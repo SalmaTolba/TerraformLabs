@@ -1,3 +1,4 @@
+##########public_route
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.myvpc.id
 }
@@ -15,6 +16,8 @@ resource "aws_route_table_association" "second_public" {
   subnet_id      = aws_subnet.second_public.id
   route_table_id = aws_route_table.public.id
 }
+
+##########private_route
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.myvpc.id
 }
